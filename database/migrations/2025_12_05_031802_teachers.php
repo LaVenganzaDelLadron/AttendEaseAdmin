@@ -17,10 +17,9 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('contact_number', 20)->nullable();
             $table->string('firstname', 100);
-            $table->string('middlename',100)->nullable();
             $table->string('lastname', 100);
             $table->timestamp('created_at')->useCurrent();
-            $table->enum('status', ['active', 'inactive', 'suspended'])->default('inactive');
+            $table->string('status', 50)->nullable();
         });
     }
 
